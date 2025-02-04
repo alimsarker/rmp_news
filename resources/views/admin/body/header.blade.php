@@ -1,23 +1,8 @@
-<style> 
-    .custom-hover {
-    color: black;
-    background-color: white;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.custom-hover:hover {
-    background-color: #5D9CEC; /* Background changes on hover */
-    color: black; /* Keep text color the same */
-}
-
-</style>
-
-
 <header id="page-topbar" style="background-color: #5D9CEC;">
-                <div class="navbar-header">
+<div class="navbar-header">
                     <div class="d-flex">
                         <!-- LOGO -->
-                        <div class="navbar-brand-box">
+                        <div class="navbar-brand-box" style="background-color: #5D9CEC;">
                             <a href="index.html" class="logo logo-dark">
                                 <span class="logo-sm">
                                     <img src="{{ asset('logo/logo.png') }}" alt="logo-sm" height="22">
@@ -70,7 +55,7 @@
 
                       
 
-                        <div class="dropdown d-inline-block user-dropdown">
+                        <div class="dropdown d-inline-block user-dropdown" >
                             <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded-circle header-profile-user" src="{{ asset('backend/assets/images/commissioner_rmp.jpeg') }}" 

@@ -1,41 +1,64 @@
-<div class="vertical-menu sidebar bg-dark text-white vh-100">
+
+<style>
+
+
+    /* Default styles for all menu items */
+.vertical-menu a {
+    color: #dcdcdc !important; /* Light text */
+    text-decoration: none;
+}
+
+/* Hover effect for all menu items */
+.vertical-menu a:hover {
+    color: white !important;
+}
+
+/* Special hover effect for Dashboard and Website */
+.vertical-menu a[href*="dashboard"]:hover,
+.vertical-menu a[href*="alimsarker"]:hover {
+    background-color: #6c757d !important; /* Slightly lighter dark */
+    color: white !important; /* White text */
+    border-radius: 5px; /* Optional: rounded corners */
+    padding: 5px 10px; /* Optional: spacing */
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+</style>
+<div class="vertical-menu">
 
 <div data-simplebar class="h-100">
 
-    
+   
 
     <!--- Sidemenu -->
     <div id="sidebar-menu">
         <!-- Left Menu Start -->
         <ul class="metismenu list-unstyled" id="side-menu">
-            <li class="menu-title">Menu</li>
+           
 
             <li>
-                <a href="index.html" class="waves-effect">
-                    <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end">3</span>
+                <a href="{{ route('dashboard') }}" class="has-arrow waves-effect">
+                    <i class="menu-icon fa fa-fw fa-home"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
 
             <li>
-                <a href="calendar.html" class=" waves-effect">
-                    <i class="ri-calendar-2-line"></i>
-                    <span>Calendar</span>
+                <a href="https://alimsarker.com" class="has-arrow  waves-effect">
+                    <i class="menu-icon  fa fa-fw fa-globe"></i>
+                    <span>Website</span>
                 </a>
             </li>
 
             <li>
                 <a href="javascript: void(0);" class="has-arrow waves-effect">
-                    <i class="ri-mail-send-line"></i>
-                    <span>Email</span>
+                    <i class="menu-icon fa fa-fw fa-user"></i>
+                    <span>Profile Settings</span>
                 </a>
-                <ul class="sub-menu" aria-expanded="false">
-                    <li><a href="email-inbox.html">Inbox</a></li>
-                    <li><a href="email-read.html">Read Email</a></li>
-                </ul>
+               
             </li>
 
-            <li>
+            <!-- <li>
                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                     <i class="ri-layout-3-line"></i>
                     <span>Layouts</span>
@@ -64,164 +87,411 @@
                         </ul>
                     </li>
                 </ul>
-            </li>
+            </li> -->
 
-            <li class="menu-title">Pages</li>
+
 
             <li>
                 <a href="javascript: void(0);" class="has-arrow waves-effect">
-                    <i class="ri-account-circle-line"></i>
-                    <span>Authentication</span>
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Users</span>
                 </a>
                 <ul class="sub-menu" aria-expanded="false">
-                    <li><a href="auth-login.html">Login</a></li>
-                    <li><a href="auth-register.html">Register</a></li>
-                    <li><a href="auth-recoverpw.html">Recover Password</a></li>
-                    <li><a href="auth-lock-screen.html">Lock Screen</a></li>
+                    <li><a href="tables-basic.html">Users List </a></li>
+                    <li><a href="tables-datatable.html">Blocked Users </a></li>
+                    <li><a href="tables-responsive.html">Add New User </a></li>
+                   
                 </ul>
             </li>
 
-            <li>
-                <a href="javascript: void(0);" class="has-arrow waves-effect">
-                    <i class="ri-profile-line"></i>
-                    <span>Utility</span>
-                </a>
-                <ul class="sub-menu" aria-expanded="false">
-                    <li><a href="pages-starter.html">Starter Page</a></li>
-                    <li><a href="pages-timeline.html">Timeline</a></li>
-                    <li><a href="pages-directory.html">Directory</a></li>
-                    <li><a href="pages-invoice.html">Invoice</a></li>
-                    <li><a href="pages-404.html">Error 404</a></li>
-                    <li><a href="pages-500.html">Error 500</a></li>
-                </ul>
-            </li>
-
-            <li class="menu-title">Components</li>
 
             <li>
                 <a href="javascript: void(0);" class="has-arrow waves-effect">
-                    <i class="ri-pencil-ruler-2-line"></i>
-                    <span>UI Elements</span>
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Role</span>
                 </a>
                 <ul class="sub-menu" aria-expanded="false">
-                    <li><a href="ui-alerts.html">Alerts</a></li>
-                    <li><a href="ui-buttons.html">Buttons</a></li>
-                    <li><a href="ui-cards.html">Cards</a></li>
-                    <li><a href="ui-carousel.html">Carousel</a></li>
-                    <li><a href="ui-dropdowns.html">Dropdowns</a></li>
-                    <li><a href="ui-grid.html">Grid</a></li>
-                    <li><a href="ui-images.html">Images</a></li>
-                    <li><a href="ui-lightbox.html">Lightbox</a></li>
-                    <li><a href="ui-modals.html">Modals</a></li>
-                    <li><a href="ui-offcanvas.html">Offcavas</a></li>
-                    <li><a href="ui-progressbars.html">Progress Bars</a></li>
-                    <li><a href="ui-tabs-accordions.html">Tabs & Accordions</a></li>
-                    <li><a href="ui-typography.html">Typography</a></li>
-                    <li><a href="ui-video.html">Video</a></li>
-                    <li><a href="ui-general.html">General</a></li>
-        
+                    <li><a href="tables-basic.html">Role List </a></li>
+                    <li><a href="tables-responsive.html">Add New User </a></li>
+                   
                 </ul>
             </li>
 
             <li>
                 <a href="javascript: void(0);" class="has-arrow waves-effect">
-                    <i class="ri-vip-crown-2-line"></i>
-                    <span>Advanced UI</span>
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Permission</span>
                 </a>
                 <ul class="sub-menu" aria-expanded="false">
-                    <li><a href="advance-rangeslider.html">Range Slider</a></li>
-                    <li><a href="advance-roundslider.html">Round Slider</a></li>
-                    <li><a href="advance-session-timeout.html">Session Timeout</a></li>
-                    <li><a href="advance-sweet-alert.html">Sweetalert 2</a></li>
-                    <li><a href="advance-rating.html">Rating</a></li>
-                    <li><a href="advance-notifications.html">Notifications</a></li>
+                    <li><a href="tables-basic.html"> Permission List </a></li>
+                    <li><a href="tables-responsive.html">  Add New Permission </a></li>
+                   
                 </ul>
             </li>
 
+
             <li>
-                <a href="javascript: void(0);" class="waves-effect">
-                    <i class="ri-eraser-fill"></i>
-                    <span class="badge rounded-pill bg-danger float-end">8</span>
-                    <span>Forms</span>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>News</span>
                 </a>
                 <ul class="sub-menu" aria-expanded="false">
-                    <li><a href="form-elements.html">Form Elements</a></li>
-                    <li><a href="form-validation.html">Form Validation</a></li>
-                    <li><a href="form-advanced.html">Form Advanced Plugins</a></li>
-                    <li><a href="form-editors.html">Form Editors</a></li>
-                    <li><a href="form-uploads.html">Form File Upload</a></li>
-                    <li><a href="form-xeditable.html">Form X-editable</a></li>
-                    <li><a href="form-wizard.html">Form Wizard</a></li>
-                    <li><a href="form-mask.html">Form Mask</a></li>
+                    <li><a href="tables-basic.html">    Add New News </a></li>
+                    <li><a href="tables-responsive.html">   All News </a></li>
+                    <li><a href="tables-responsive.html">   Published News</a></li>
+                    <li><a href="tables-responsive.html">   Unpublished News</a></li>
+                    <li><a href="tables-responsive.html">   Locked News </a></li>
+
                 </ul>
             </li>
 
             <li>
                 <a href="javascript: void(0);" class="has-arrow waves-effect">
-                    <i class="ri-table-2"></i>
-                    <span>Tables</span>
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>News Category</span>
                 </a>
                 <ul class="sub-menu" aria-expanded="false">
-                    <li><a href="tables-basic.html">Basic Tables</a></li>
-                    <li><a href="tables-datatable.html">Data Tables</a></li>
-                    <li><a href="tables-responsive.html">Responsive Table</a></li>
-                    <li><a href="tables-editable.html">Editable Table</a></li>
+                    <li><a href="tables-basic.html">     Add New category </a></li>
+                    <li><a href="tables-responsive.html">     All categories</a></li>
+
                 </ul>
             </li>
 
             <li>
                 <a href="javascript: void(0);" class="has-arrow waves-effect">
-                    <i class="ri-bar-chart-line"></i>
-                    <span>Charts</span>
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Slogans</span>
                 </a>
                 <ul class="sub-menu" aria-expanded="false">
-                    <li><a href="charts-apex.html">Apex Charts</a></li>
-                    <li><a href="charts-chartjs.html">Chartjs Charts</a></li>
-                    <li><a href="charts-flot.html">Flot Charts</a></li>
-                    <li><a href="charts-knob.html">Jquery Knob Charts</a></li>
-                    <li><a href="charts-sparkline.html">Sparkline Charts</a></li>
+                    <li><a href="tables-basic.html">       Add New Slogan </a></li>
+                    <li><a href="tables-responsive.html">       All Slogans </a></li>
+                    <li><a href="tables-responsive.html">       Published Slogan</a></li>
+                    <li><a href="tables-responsive.html">     Unpublished Slogan</a></li>
+                 
+
                 </ul>
             </li>
 
             <li>
                 <a href="javascript: void(0);" class="has-arrow waves-effect">
-                    <i class="ri-brush-line"></i>
-                    <span>Icons</span>
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Notices</span>
                 </a>
                 <ul class="sub-menu" aria-expanded="false">
-                    <li><a href="icons-remix.html">Remix Icons</a></li>
-                    <li><a href="icons-materialdesign.html">Material Design</a></li>
-                    <li><a href="icons-dripicons.html">Dripicons</a></li>
-                    <li><a href="icons-fontawesome.html">Font awesome 5</a></li>
+                    <li><a href="tables-basic.html">  Add New Notice</a></li>
+                    <li><a href="tables-responsive.html">    All Notice </a></li>
+                    <li><a href="tables-responsive.html">    Published Notice</a></li>
+                    <li><a href="tables-responsive.html">   Unpublished Notice</a></li>
+                 
+
                 </ul>
             </li>
 
             <li>
                 <a href="javascript: void(0);" class="has-arrow waves-effect">
-                    <i class="ri-map-pin-line"></i>
-                    <span>Maps</span>
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>APAMS</span>
                 </a>
                 <ul class="sub-menu" aria-expanded="false">
-                    <li><a href="maps-google.html">Google Maps</a></li>
-                    <li><a href="maps-vector.html">Vector Maps</a></li>
+                    <li><a href="tables-basic.html">       All APAMS</a></li>
+                    <li><a href="tables-responsive.html">      Add New APAMS</a></li>
+                 
+
+                </ul>
+            </li>
+
+
+            <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Tenders</span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="tables-basic.html">   Create Tender </a></li>
+                    <li><a href="tables-responsive.html">    All Tenders  </a></li>
+                 
+
+                </ul>
+            </li>
+
+              <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>NOC</span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="tables-basic.html">  Add New NOC</a></li>
+                    <li><a href="tables-responsive.html">    All NOC </a></li>
+                 
+
+                </ul>
+            </li>
+
+
+            <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Download Corner</span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="tables-basic.html">  Add New File</a></li>
+                    <li><a href="tables-responsive.html">   All Downloadable Files </a></li>
+                 
+
+                </ul>
+            </li>
+
+
+            <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Designation</span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="tables-basic.html">  Add New Designation</a></li>
+                    <li><a href="tables-responsive.html">    Designation List </a></li>
+                 
+
+                </ul>
+            </li>
+
+
+            <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Officers</span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="tables-basic.html">  Add New Officers</a></li>
+                    <li><a href="tables-responsive.html">    All New Officers </a></li>
+                    <li><a href="tables-responsive.html">    Officers List</a></li>
+
+                </ul>
+            </li>
+
+
+            <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Gallery</span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="tables-basic.html">  Add New Gallery</a></li>
+                    <li><a href="tables-responsive.html">    Gallery List </a></li>
+
+                </ul>
+            </li>
+
+
+            <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Commissioner</span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="tables-basic.html">  Add New Commissioner Speech</a></li>
+                    <li><a href="tables-responsive.html">     Commissioner Speechs </a></li>
+                 
+
                 </ul>
             </li>
 
             <li>
                 <a href="javascript: void(0);" class="has-arrow waves-effect">
-                    <i class="ri-share-line"></i>
-                    <span>Multi Level</span>
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>FAQ</span>
                 </a>
-                <ul class="sub-menu" aria-expanded="true">
-                    <li><a href="javascript: void(0);">Level 1.1</a></li>
-                    <li><a href="javascript: void(0);" class="has-arrow">Level 1.2</a>
-                        <ul class="sub-menu" aria-expanded="true">
-                            <li><a href="javascript: void(0);">Level 2.1</a></li>
-                            <li><a href="javascript: void(0);">Level 2.2</a></li>
-                        </ul>
-                    </li>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="tables-basic.html">  Add New FAQ</a></li>
+                    <li><a href="tables-responsive.html">    FAQ List </a></li>
                 </ul>
             </li>
+
+
+            <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Complaints</span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="tables-basic.html">  List</a></li>
+                    <li><a href="tables-responsive.html"> Archives</a></li>
+                 
+
+                </ul>
+            </li>
+
+
+
+
+            <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Informations</span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                <li><a href="tables-basic.html">  List</a></li>
+                <li><a href="tables-responsive.html"> Archives</a></li>
+                 
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon fa fa-fw fa-file-alt"></i>
+                    <span>SMS</span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="tables-basic.html"> Logs</a></li>
+                    <li><a href="tables-responsive.html"> Send</a></li>
+                 
+
+                </ul>
+            </li>
+
+
+            <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Police Station</span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="tables-basic.html">  Add New Police Station</a></li>
+                    <li><a href="tables-responsive.html">Police Stations </a></li>
+                 
+
+                </ul>
+            </li>
+
+
+
+            <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Important Links</span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="tables-basic.html">  Add Links</a></li>
+                    <li><a href="tables-responsive.html">All Links</a></li>
+                 
+
+                </ul>
+            </li>
+
+
+            
+            <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Division</span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="tables-basic.html">  Add New Division </a></li>
+                    <li><a href="tables-responsive.html">All Division </a></li>
+                 
+
+                </ul>
+            </li>
+
+
+            
+            <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Thana </span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="tables-basic.html">  Add New Thana </a></li>
+                    <li><a href="tables-responsive.html">All  Thanas </a></li>
+                 
+
+                </ul>
+            </li>
+
+
+            
+            <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Beat Officers </span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="tables-basic.html">  Add Beat Officers  </a></li>
+                    <li><a href="tables-responsive.html">All Beat Officers </a></li>
+                 
+
+                </ul>
+            </li>
+
+
+            
+            <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Units </span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="tables-basic.html">  Add New Units </a></li>
+                    <li><a href="tables-responsive.html">All Units </a></li>
+                 
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Contact Info </span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="tables-basic.html">  Add new contact </a></li>
+                    <li><a href="tables-responsive.html">All contact </a></li>
+                 
+
+                </ul>
+            </li>
+            <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Send SMS </span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="tables-basic.html">     Send Message </a></li>
+                 
+                 
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Group SMS </span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="tables-basic.html">  Add Group </a></li>
+                    <li><a href="tables-responsive.html">All Groups </a></li>
+                    <li><a href="tables-responsive.html">Send Group SMS</a></li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="menu-icon  fa fa-fw fa-paw"></i>
+                    <span>Group Contact </span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="tables-basic.html">  Add Contact  </a></li>
+                    <li><a href="tables-responsive.html">All Contact </a></li>
+                 
+
+                </ul>
+            </li>
+
+
+
 
         </ul>
     </div>

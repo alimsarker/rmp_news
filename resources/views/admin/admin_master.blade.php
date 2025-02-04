@@ -30,8 +30,8 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
     </head>
 
-    <body data-topbar="dark">
     
+    <body data-topbar="dark" data-sidebar="dark">
     <!-- <body data-layout="horizontal" data-topbar="dark"> -->
 
         <!-- Begin page -->
